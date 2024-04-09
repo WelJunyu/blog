@@ -1,0 +1,49 @@
+{
+  "name": "XD",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "docusaurus": "docusaurus",
+    "start": "docusaurus start --host 0.0.0.0",
+    "build": "docusaurus build",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "docusaurus deploy",
+    "clear": "docusaurus clear",
+    "serve": "docusaurus serve",
+    "write-translations": "docusaurus write-translations",
+    "write-heading-ids": "docusaurus write-heading-ids"
+  },
+  "dependencies": {
+    "@codemirror/lang-cpp": "^0.19.1",
+    "@docusaurus/core": "2.4.1",
+    "@docusaurus/plugin-sitemap": "^2.4.1",
+    "@docusaurus/preset-classic": "2.4.1",
+    "@douyinfe/semi-ui": "^2.41.1",
+    "@easyops-cn/docusaurus-search-local": "^0.36.0",
+    "@mdx-js/react": "^1.6.21",
+    "@uiw/react-codemirror": "^4.5.1",
+    "clsx": "^1.1.1",
+    "array-shuffle": "^3.0.0",
+    "codemirror": "^5.65.2",
+    "hast-util-is-element": "1.1.0",
+    "html2canvas": "^1.4.1",
+    "prism-react-renderer": "^1.2.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "rehype-katex": "5",
+    "remark-math": "3",
+    "tdesign-react": "^0.25.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

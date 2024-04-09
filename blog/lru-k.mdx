@@ -1,0 +1,27 @@
+---
+title: LRU-K
+description: "使用交互型页面演示 LKU-K 算法。"
+authors: [WelJunyu]
+tags: [C++]
+date: 2024-4-9
+---
+
+LRU-K 中的 K 代表最近使用的次数，传统的 LRU 算法可认为是 LRU-1。**LRU-K 核心思想**：将“最近使用过 1 次”的判断标准扩展为“最近使用过 K 次”。其主要目的是解决 LRU-1 算法“缓存污染”的问题。
+
+<!--truncate-->
+
+LRU-K 为每一个 Frame 维护一个大小为 K 的历史记录（队列形式），新访问记录将加入队尾，旧访问记录在队列大小超过 K 次后删除。
+- 当历史记录未达到 K 次时，认为该 Frame 的 K 距离为 $\infty$。
+- 当历史记录到达 K 次时，认为该 Frame 的 K 距离为最大时间戳数。
+- 当需要淘汰一个 Frame 时，优先淘汰 K 距离最大的 Frame。
+- 若有相同距离的 Frame，优先淘汰最先记录 Frame。
+
+import LRUKExample from '../src/components/LRUKExample';
+
+:::tip 前置说明
+下列的例子中，LRU-K 算法缓存 Frame 的个数 `n` 为 `7`，记录的最长历史距离 `k` 为 `2`。
+
+每一行代表一个缓存池中的 Frame，越靠近第一行，淘汰的优先级越高！
+:::
+
+<LRUKExample/>
